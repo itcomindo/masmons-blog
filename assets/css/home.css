@@ -1,0 +1,156 @@
+#home-headline {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.hl-wr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 1rem;
+}
+
+.hl {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding-bottom: 4rem;
+  border: 1px solid var(--transparent-dark-2);
+  box-shadow: 0 0 1rem var(--transparent-dark-2);
+  transition: 0.3s linear all;
+}
+
+.hl-fim-wr {
+  /* width: 100%; */
+  height: 12rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.hl-fim-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.3s linear all;
+}
+.hl-fim {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s linear all;
+}
+
+.hl-meta-wr {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.meta-content {
+  font-size: 80%;
+  padding: 0.3rem 1rem;
+}
+
+.hl-cat-wr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: var(--transparent-dark-4);
+}
+.hl-cat-link {
+  color: var(--color-light-1);
+}
+
+.hl-date-wr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--transparent-dark-4);
+  color: var(--color-light-1);
+}
+.hl-comment-wr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hl-author-wr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/**
+=========================
+*Template
+*=========================
+*/
+#hlt-2 .hl.num-1,
+#hlt-1 .hl.num-1 {
+  .hl-fim-wr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+#hlt-2 .hl.num-1 .hl-fim-wr,
+#hlt-1 .hl.num-1 .hl-fim-wr {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: unset;
+}
+#hlt-2 .hl.num-1 .hl-comment-wr,
+#hlt-1 .hl.num-1 .hl-comment-wr {
+  z-index: 2;
+  color: white;
+  left: unset;
+  right: 0;
+}
+
+#hlt-2 .hl.num-1 .hl-date-wr,
+#hlt-1 .hl.num-1 .hl-date-wr {
+  z-index: 2;
+}
+#hlt-2 .hl.num-1 .hl-meta-wr,
+#hlt-1 .hl.num-1 .hl-meta-wr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--transparent-dark-5);
+  color: var(--color-light-1);
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+#hlt-2 .hl.num-1 .hl-title,
+#hlt-1 .hl.num-1 .hl-title {
+  line-height: 1.2;
+  margin: 0;
+  font-size: 1.5rem;
+}
+#hlt-2 .hl.num-1 .hl-title-link,
+#hlt-1 .hl.num-1 .hl-title-link {
+  color: var(--color-light-1);
+}
+
+/**
+=========================
+*Hovering Style
+*=========================
+*/
+.hl:hover {
+  box-shadow: 0 0 1rem var(--transparent-dark-3);
+  transform: translateY(-4px);
+  transition: 0.1s linear all;
+}
+.hl:hover .hl-fim-link {
+  transform: scale(1.1);
+  transition: 0.1s linear all;
+}
+.hl:hover .hl-fim {
+  transform: rotate(-5deg);
+  transition-delay: 0.1s;
+}
