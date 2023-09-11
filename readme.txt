@@ -1,0 +1,1 @@
+Masmons Blog adalah WordPress theme sederhana untuk membuat sebuah website dengan konsep blog.
